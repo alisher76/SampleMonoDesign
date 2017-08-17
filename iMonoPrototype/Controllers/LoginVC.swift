@@ -10,26 +10,40 @@ import UIKit
 
 class LoginVC: UIViewController {
 
+    @IBOutlet weak var tapTocloseView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        let gestureRescognizer = UITapGestureRecognizer()
+        gestureRescognizer.addTarget(self, action: #selector(LoginVC.tapToClose(_:)))
+        view.addGestureRecognizer(gestureRescognizer)
+        tapTocloseView.layer.shadowOpacity = 1.0
+        tapTocloseView.layer.shadowColor = UIColor.black.cgColor
+        tapTocloseView.layer.shadowRadius = CGFloat(4.0)
+        tapTocloseView.clipsToBounds = true
+        tapTocloseView.backgroundColor = UIColor.black
         // Do any additional setup after loading the view.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        let createAccountVC = CreateAccountVC()
+        createAccountVC.modalPresentationStyle = .custom
+        self.present(createAccountVC, animated: true, completion: nil)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func createAccountButtonTapped(_ sender: Any) {
+        UIView.animate(withDuration: 0.2) {
+            self.view.alpha = 0.0
+        }
+        let createAccountVC = CreateAccountVC()
+        createAccountVC.modalPresentationStyle = .custom
+        self.present(createAccountVC, animated: true, completion: nil)
     }
-    */
+    
+    @objc func tapToClose(_ gestureRecognizer: UITapGestureRecognizer) {
+        dismiss(animated: true, completion: nil)
+    }
 
 }

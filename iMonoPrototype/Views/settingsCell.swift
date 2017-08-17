@@ -14,7 +14,6 @@ class settingsCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        nameLabel.text = "Test number 1"
     }
     
 }

@@ -42,7 +42,8 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func composeButtonTapped(_ sender: Any) {
-        
+        guard let selectFriendsVC = storyboard?.instantiateViewController(withIdentifier: "selectFriendsVC") as? SelectFriendsVC else { return }
+        presentDetail(selectFriendsVC)
     }
     
     @IBAction func hamburgerTapped(_ sender: Any) {
@@ -67,7 +68,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         } else if collectionView == segmentCollectionView {
             return 4
         } else if collectionView == mainCollectionView {
-            return 2
+            return 6
         }
         
         return 0
@@ -85,9 +86,19 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
             }
             return cell
         } else {
+            if indexPath.row == 0 {
            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "instagramFeedCell", for: indexPath) as? PostsCell else { return UICollectionViewCell() }
-            
             return cell
+            } else {
+                guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "tweetCell", for: indexPath) as? TweetCell else { return UICollectionViewCell() }
+                cell.postMedia = nil
+                cell.profileImage.image = UIImage(named: "dark3")
+                cell.timeLabel.text = "20 minutes ago"
+                cell.userNameLabel.text = "@alisher"
+                cell.nameLabel.text = "Alisher"
+                cell.tweetContentLabel.text = "Getting there u know if you have design first its better"
+                return cell
+            }
         }
     }
     
@@ -96,9 +107,14 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
             return CGSize(width: view.frame.width / 6, height: friendsCollectionView.frame.size.height - 10)
         } else if collectionView == segmentCollectionView {
            return CGSize(width: 84, height: 50)
-        } else {
-          return CGSize(width: view.frame.width - 10, height: 300)
+        } else if collectionView == mainCollectionView {
+            if indexPath.row == 0 {
+           return CGSize(width: view.frame.width - 10, height: 200)
+            } else {
+                return CGSize(width: view.frame.width - 10, height: 100)
+            }
         }
+        return CGSize(width: 84, height: 50)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
@@ -107,7 +123,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         } else if collectionView == segmentCollectionView {
             return 2.0
         } else {
-            return 1.0
+            return 2.0
         }
     }
     
@@ -117,7 +133,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         } else if collectionView == segmentCollectionView {
             return 2.0
         } else {
-            return 8.0
+            return 5.0
         }
     }
     

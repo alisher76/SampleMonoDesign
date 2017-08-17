@@ -12,7 +12,10 @@ class CreateMonocleAccountVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        let gestureRescognizer = UITapGestureRecognizer()
+        gestureRescognizer.addTarget(self, action: #selector(LoginVC.tapToClose(_:)))
+        view.addGestureRecognizer(gestureRescognizer)
         // Do any additional setup after loading the view.
     }
 
@@ -21,15 +24,10 @@ class CreateMonocleAccountVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @objc func tapToClose(_ gestureRecognizer: UITapGestureRecognizer) {
+        dismiss(animated: true, completion: nil)
     }
-    */
+    
+    
 
 }

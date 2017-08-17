@@ -28,6 +28,8 @@
 		AC8BB0B41F4578A500CB192A /* SelectFriendsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8BB0B31F4578A500CB192A /* SelectFriendsVC.swift */; };
 		AC8BB0B61F45790900CB192A /* SelectFriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8BB0B51F45790900CB192A /* SelectFriendCell.swift */; };
 		AC8BB0BA1F459EEC00CB192A /* InstaPostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8BB0B91F459EEC00CB192A /* InstaPostCell.swift */; };
+		AC9EF1F11F46163D003630CC /* TweetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9EF1F01F46163D003630CC /* TweetCell.swift */; };
+		AC9EF1F41F461B61003630CC /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9EF1F31F461B61003630CC /* UIViewControllerExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +58,8 @@
 		AC8BB0B31F4578A500CB192A /* SelectFriendsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectFriendsVC.swift; sourceTree = "<group>"; };
 		AC8BB0B51F45790900CB192A /* SelectFriendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectFriendCell.swift; sourceTree = "<group>"; };
 		AC8BB0B91F459EEC00CB192A /* InstaPostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstaPostCell.swift; sourceTree = "<group>"; };
+		AC9EF1F01F46163D003630CC /* TweetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetCell.swift; sourceTree = "<group>"; };
+		AC9EF1F31F461B61003630CC /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +92,7 @@
 		AC24649A1F451EEC0071EDD0 /* iMonoPrototype */ = {
 			isa = PBXGroup;
 			children = (
+				AC9EF1F21F461B47003630CC /* Extensions */,
 				AC8BB0A61F456D7A00CB192A /* Supporting Files */,
 				AC8BB09F1F4548AA00CB192A /* Views */,
 				AC3602E61F45415A009719AF /* Group */,
@@ -142,6 +147,7 @@
 				AC8BB0B11F4576C300CB192A /* settingsCell.swift */,
 				AC8BB0B51F45790900CB192A /* SelectFriendCell.swift */,
 				AC8BB0B91F459EEC00CB192A /* InstaPostCell.swift */,
+				AC9EF1F01F46163D003630CC /* TweetCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -154,6 +160,14 @@
 				AC8BB0AC1F4571A700CB192A /* SWRevealViewController.m */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AC9EF1F21F461B47003630CC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				AC9EF1F31F461B61003630CC /* UIViewControllerExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,6 +248,8 @@
 				AC8BB0A31F45491300CB192A /* SegmentMenuCell.swift in Sources */,
 				AC24649C1F451EEC0071EDD0 /* AppDelegate.swift in Sources */,
 				AC8BB0B21F4576C300CB192A /* settingsCell.swift in Sources */,
+				AC9EF1F11F46163D003630CC /* TweetCell.swift in Sources */,
+				AC9EF1F41F461B61003630CC /* UIViewControllerExtension.swift in Sources */,
 				AC3602E21F453E64009719AF /* CreateMonocleAccountVC.swift in Sources */,
 				AC3602DA1F4539EF009719AF /* LoginVC.swift in Sources */,
 				AC3602DE1F453C7F009719AF /* CreateAccountVC.swift in Sources */,

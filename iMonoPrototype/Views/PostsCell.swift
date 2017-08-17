@@ -10,26 +10,29 @@ import UIKit
 
 class PostsCell: UICollectionViewCell {
     
+    
+    @IBOutlet weak var collectionView: UICollectionView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        
+        collectionView.delegate = self
+        collectionView.dataSource = self
     }
 }
 
 extension PostsCell: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+        return 4
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        if indexPath.row == 0 {            
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "instaPostCell", for: indexPath) as! InstaPostCell
+            cell.postMedia.image = UIImage(named: "dark10")
+            cell.profileImage.image = UIImage(named: "dark12")
+            cell.postDescription.text = "Hello Guys"
             return cell
-        } else {
-        return UICollectionViewCell()
-        }
     }
     
 }

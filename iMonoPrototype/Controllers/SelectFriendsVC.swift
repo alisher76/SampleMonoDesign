@@ -17,11 +17,11 @@ class SelectFriendsVC: UIViewController {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-        self.revealViewController().rearViewRevealWidth = self.view.frame.width - 30
+        
     }
     
     @IBAction func backBtnTapped(_ sender: Any) {
-        
+        dismissDetail()
     }
     
 }
