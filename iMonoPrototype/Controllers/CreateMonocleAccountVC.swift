@@ -10,12 +10,21 @@ import UIKit
 
 class CreateMonocleAccountVC: UIViewController {
 
+    @IBOutlet weak var createMonocleUserView: UIView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let gestureRescognizer = UITapGestureRecognizer()
         gestureRescognizer.addTarget(self, action: #selector(LoginVC.tapToClose(_:)))
         view.addGestureRecognizer(gestureRescognizer)
+        
+        createMonocleUserView.layer.shadowOpacity = 1.0
+        createMonocleUserView.layer.shadowColor = UIColor.black.cgColor
+        createMonocleUserView.layer.shadowRadius = CGFloat(4.0)
+        createMonocleUserView.clipsToBounds = true
+        createMonocleUserView.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
         // Do any additional setup after loading the view.
     }
 
@@ -25,8 +34,11 @@ class CreateMonocleAccountVC: UIViewController {
     }
     
     @objc func tapToClose(_ gestureRecognizer: UITapGestureRecognizer) {
+        
         dismiss(animated: true, completion: nil)
     }
+    
+    
     
     
 

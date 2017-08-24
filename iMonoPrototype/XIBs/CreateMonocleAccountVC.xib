@@ -15,6 +15,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CreateMonocleAccountVC" customModule="iMonoPrototype" customModuleProvider="target">
             <connections>
+                <outlet property="createMonocleUserView" destination="9lL-Mn-aNY" id="Pou-Jp-hz9"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -74,7 +75,7 @@
                         <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="34" translatesAutoresizingMaskIntoConstraints="NO" id="HI8-81-9NM">
                             <rect key="frame" x="20" y="10" width="280" height="70"/>
                             <subviews>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9dg-Yk-Rvn">
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iMonocle" translatesAutoresizingMaskIntoConstraints="NO" id="9dg-Yk-Rvn">
                                     <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="70" id="Tyq-vJ-kJa"/>
@@ -83,11 +84,11 @@
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Account: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dRV-vq-t1N">
                                     <rect key="frame" x="104" y="25" width="72" height="20"/>
-                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
+                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hA8-h6-TzK">
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="twitter" translatesAutoresizingMaskIntoConstraints="NO" id="hA8-h6-TzK">
                                     <rect key="frame" x="210" y="0.0" width="70" height="70"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="70" id="P9N-xJ-yiG"/>
@@ -121,4 +122,8 @@
             <point key="canvasLocation" x="33.5" y="54.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="iMonocle" width="191" height="191"/>
+        <image name="twitter" width="71" height="71"/>
+    </resources>
 </document>

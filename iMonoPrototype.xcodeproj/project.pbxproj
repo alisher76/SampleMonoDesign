@@ -11,6 +11,8 @@
 		AC2464A11F451EEC0071EDD0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC24649F1F451EEC0071EDD0 /* Main.storyboard */; };
 		AC2464A31F451EEC0071EDD0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC2464A21F451EEC0071EDD0 /* Assets.xcassets */; };
 		AC2464A61F451EEC0071EDD0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC2464A41F451EEC0071EDD0 /* LaunchScreen.storyboard */; };
+		AC26DC121F47666500841C5A /* PostFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC26DC111F47666500841C5A /* PostFlowLayout.swift */; };
+		AC26DC141F48BC2E00841C5A /* CellShadowExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC26DC131F48BC2E00841C5A /* CellShadowExtension.swift */; };
 		AC3602D71F452F72009719AF /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3602D61F452F72009719AF /* GradientView.swift */; };
 		AC3602DA1F4539EF009719AF /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3602D81F4539EF009719AF /* LoginVC.swift */; };
 		AC3602DB1F4539EF009719AF /* LoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC3602D91F4539EF009719AF /* LoginVC.xib */; };
@@ -39,6 +41,8 @@
 		AC2464A21F451EEC0071EDD0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC2464A51F451EEC0071EDD0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AC2464A71F451EEC0071EDD0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC26DC111F47666500841C5A /* PostFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostFlowLayout.swift; sourceTree = "<group>"; };
+		AC26DC131F48BC2E00841C5A /* CellShadowExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellShadowExtension.swift; sourceTree = "<group>"; };
 		AC3602D61F452F72009719AF /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		AC3602D81F4539EF009719AF /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		AC3602D91F4539EF009719AF /* LoginVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginVC.xib; sourceTree = "<group>"; };
@@ -92,6 +96,7 @@
 		AC24649A1F451EEC0071EDD0 /* iMonoPrototype */ = {
 			isa = PBXGroup;
 			children = (
+				AC26DC101F47662800841C5A /* Layouts */,
 				AC9EF1F21F461B47003630CC /* Extensions */,
 				AC8BB0A61F456D7A00CB192A /* Supporting Files */,
 				AC8BB09F1F4548AA00CB192A /* Views */,
@@ -105,6 +110,14 @@
 				AC2464A71F451EEC0071EDD0 /* Info.plist */,
 			);
 			path = iMonoPrototype;
+			sourceTree = "<group>";
+		};
+		AC26DC101F47662800841C5A /* Layouts */ = {
+			isa = PBXGroup;
+			children = (
+				AC26DC111F47666500841C5A /* PostFlowLayout.swift */,
+			);
+			name = Layouts;
 			sourceTree = "<group>";
 		};
 		AC3602E41F45412E009719AF /* XIBs */ = {
@@ -166,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				AC9EF1F31F461B61003630CC /* UIViewControllerExtension.swift */,
+				AC26DC131F48BC2E00841C5A /* CellShadowExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -252,6 +266,8 @@
 				AC9EF1F41F461B61003630CC /* UIViewControllerExtension.swift in Sources */,
 				AC3602E21F453E64009719AF /* CreateMonocleAccountVC.swift in Sources */,
 				AC3602DA1F4539EF009719AF /* LoginVC.swift in Sources */,
+				AC26DC141F48BC2E00841C5A /* CellShadowExtension.swift in Sources */,
+				AC26DC121F47666500841C5A /* PostFlowLayout.swift in Sources */,
 				AC3602DE1F453C7F009719AF /* CreateAccountVC.swift in Sources */,
 				AC3602D71F452F72009719AF /* GradientView.swift in Sources */,
 				AC8BB0B61F45790900CB192A /* SelectFriendCell.swift in Sources */,

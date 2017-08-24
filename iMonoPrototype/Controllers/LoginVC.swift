@@ -22,7 +22,7 @@ class LoginVC: UIViewController {
         tapTocloseView.layer.shadowColor = UIColor.black.cgColor
         tapTocloseView.layer.shadowRadius = CGFloat(4.0)
         tapTocloseView.clipsToBounds = true
-        tapTocloseView.backgroundColor = UIColor.black
+        tapTocloseView.backgroundColor =  #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
         // Do any additional setup after loading the view.
     }
     
@@ -32,11 +32,9 @@ class LoginVC: UIViewController {
         createAccountVC.modalPresentationStyle = .custom
         self.present(createAccountVC, animated: true, completion: nil)
     }
-    
+    // To Do: Manage the dismiss action! UIView
     @IBAction func createAccountButtonTapped(_ sender: Any) {
-        UIView.animate(withDuration: 0.2) {
-            self.view.alpha = 0.0
-        }
+        
         let createAccountVC = CreateAccountVC()
         createAccountVC.modalPresentationStyle = .custom
         self.present(createAccountVC, animated: true, completion: nil)

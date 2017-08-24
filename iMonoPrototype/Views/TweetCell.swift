@@ -22,4 +22,11 @@ class TweetCell: UICollectionViewCell {
         
     }
     
+    func addShadow() {
+        self.layer.cornerRadius = 10
+        self.layer.borderColor = UIColor.lightGray.cgColor
+        self.layer.borderWidth = 1
+        self.clipsToBounds = true
+    }
+    
 }

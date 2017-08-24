@@ -7,6 +7,11 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.16"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Futura.ttc">
+            <string>Futura-Medium</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginVC" customModule="iMonoPrototype" customModuleProvider="target">
             <connections>
@@ -81,9 +86,9 @@
                         <constraint firstAttribute="width" constant="320" id="ws3-B2-Wbg"/>
                     </constraints>
                 </view>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IPH-dI-2We">
-                    <rect key="frame" x="156" y="229.5" width="62.5" height="31.5"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IPH-dI-2We">
+                    <rect key="frame" x="167.5" y="232.5" width="41.5" height="22.5"/>
+                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -91,9 +96,9 @@
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="fZm-Y0-zEV" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="JX6-yO-xWW"/>
-                <constraint firstItem="fZm-Y0-zEV" firstAttribute="top" secondItem="IPH-dI-2We" secondAttribute="bottom" constant="-58" id="LpE-Sw-HtX"/>
                 <constraint firstItem="fZm-Y0-zEV" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="PfA-uN-p3I"/>
-                <constraint firstItem="IPH-dI-2We" firstAttribute="leading" secondItem="fZm-Y0-zEV" secondAttribute="trailing" constant="-191" id="mcR-6b-JLJ"/>
+                <constraint firstItem="IPH-dI-2We" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="-90" id="b7e-ZE-ssx"/>
+                <constraint firstItem="IPH-dI-2We" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="hQo-Q6-AB5"/>
             </constraints>
             <point key="canvasLocation" x="33.5" y="54.5"/>
         </view>
